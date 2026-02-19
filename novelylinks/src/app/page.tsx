@@ -237,7 +237,7 @@ export default function NovelyHub() {
           </div>
           
           <div className="text-center space-y-1">
-            <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">Novely Company Group</p>
+            <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">Novely Company</p>
             <p className="text-[8px] text-slate-600 font-bold uppercase tracking-widest">© 2026 Aracaju, SE • Brasil</p>
           </div>
         </footer>

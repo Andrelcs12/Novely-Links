@@ -209,36 +209,35 @@ const LaParmaLinks = () => {
         {/* Divisor Sutil */}
 <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mt-8" />
 
-{/* Seção Novely Company */}
-<motion.div 
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 1 }}
-  className="flex flex-col items-center group"
->
-  <p className="text-[8px] uppercase tracking-[0.4em] text-white/30 mb-3 font-bold mt-2">
-    Uma marca do grupo
-  </p>
-  
-  <Link href="/" className="flex flex-col items-center gap-2 hover:scale-105 transition-transform duration-300">
-    <div className="relative w-20 h-8 opacity-60 group-hover:opacity-100 transition-opacity">
-      <Image 
-        src="/logo.png" // Sua logo da Novely
-        alt="Novely Company"
-        fill
-        className="object-contain"
-      />
-    </div>
-    <span className="text-[9px] text-white/20 group-hover:text-red-500 transition-colors uppercase tracking-[0.2em] font-black">
-      Vire um cliente Novely →
-    </span>
-  </Link>
-</motion.div>
 
-{/* O Footer original desce um pouco mais ou pode ser removido se usar o da Novely */}
-<footer className="mt-8 opacity-30 text-white text-[9px] uppercase tracking-[0.3em]">
-  Aracaju • Sergipe
-</footer>
+<div className="flex flex-col items-center text-center mt-6 group">
+  {/* Linha decorativa sutil que cresce no hover */}
+  <motion.div 
+    initial={{ width: "20px" }}
+    whileInView={{ width: "40px" }}
+   
+  />
+
+  <div className="space-y-2">
+    <p className="text-[10px] font-black uppercase tracking-[0.6em] text-white/20 leading-none">
+      Desenvolvido por
+    </p>
+    
+    <p className="text-sm font-black uppercase tracking-[0.2em] text-white">
+      Novely <span className="text-blue-500">Company</span>
+    </p>
+
+    <div className="flex items-center justify-center gap-3 pt-2">
+      <span className="h-[1px] w-2 bg-white/10" />
+      <p className="text-[9px] text-slate-500 font-bold uppercase tracking-widest">
+        © 2026 • Aracaju, SE
+      </p>
+      <span className="h-[1px] w-2 bg-white/10" />
+    </div>
+  </div>
+</div>
+
+
 
 
       </motion.div>
