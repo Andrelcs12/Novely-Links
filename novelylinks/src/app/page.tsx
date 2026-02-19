@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronRight, Instagram, Mail, MessageCircle, ArrowUpRight, BarChart3, Users, Headset } from 'lucide-react';
+import { ChevronRight, Instagram, Mail, MessageCircle, ArrowUpRight, BarChart3, Users, Headset, MessageCircleCheck } from 'lucide-react';
 import Aurora from '@/components/Aurora';
 
 const BUSINESS_UNITS = [
@@ -175,9 +175,9 @@ export default function NovelyHub() {
       <a 
         href={`https://wa.me/${waNumber}?text=Olá!%20Quero%20uma%20estratégia%20personalizada%20para%20meu%20negócio.`}
         target="_blank"
-        className="text-[10px] font-black text-white uppercase bg-blue-600 py-3 px-8 rounded-full tracking-[0.2em] shadow-lg shadow-blue-900/40 hover:bg-blue-500 transition-all active:scale-95"
+        className="text-[10px] flex items-center gap-2 font-black text-white uppercase bg-blue-600 py-3 px-8 rounded-full tracking-[0.2em] shadow-lg shadow-blue-900/40 hover:bg-blue-500 transition-all active:scale-95"
       >
-        Solicitar Estratégia
+        <MessageCircleCheck size={20}/> Saber mais
       </a>
     </div>
   </div>
