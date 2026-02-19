@@ -115,7 +115,7 @@ export default function NovelyHub() {
         {/* UNIDADES DE NEGÓCIO */}
         <section className="w-full space-y-4 my-6">
           <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 ml-2 mb-4">
-            Nossas Unidades
+            Nossos parceiros
           </h2>
           
           {BUSINESS_UNITS.map((unit, idx) => (
