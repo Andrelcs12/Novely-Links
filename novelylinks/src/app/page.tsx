@@ -83,34 +83,33 @@ export default function NovelyHub() {
     />
   </motion.div>
 
-  {/* Nome da Holding e Descrição "Quiet Luxury" */}
-  <div className="space-y-4">
-    <motion.h1 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.3 }}
-      className="text-blue-500 text-2xl font-semibold tracking-[0.9em] uppercase ml-[0.6em]"
-    >
-      Novely Links
-    </motion.h1>
-    
-    <motion.div
-      initial={{ width: 0 }}
-      animate={{ width: "40px" }}
-      className="h-0.5 bg-blue-600/50 mx-auto"
-    />
+{/* Nome da Holding e Descrição */}
+<div className="space-y-4">
+  <motion.h1 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.3 }}
+    className="text-blue-500 text-2xl font-semibold tracking-[0.9em] uppercase ml-[0.6em]"
+  >
+    Novely Links
+  </motion.h1>
+  
+  <motion.div
+    initial={{ width: 0 }}
+    animate={{ width: "40px" }}
+    className="h-0.5 bg-blue-600/50 mx-auto"
+  />
 
-    <motion.p 
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-      
-    >
-      <p className="text-blue-500 text-[10px] font-black uppercase tracking-[0.4em] mt-2">
-            Marketing & Gestão Comercial
-          </p>
-    </motion.p>
-  </div>
+  {/* CORREÇÃO AQUI: Mudamos motion.p para motion.div e removemos o <p> extra */}
+  <motion.div 
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.5 }}
+    className="text-blue-500 text-[10px] font-black uppercase tracking-[0.4em] mt-2"
+  >
+    Marketing & Gestão Comercial
+  </motion.div>
+</div>
 </header>
 
         {/* UNIDADES DE NEGÓCIO */}
