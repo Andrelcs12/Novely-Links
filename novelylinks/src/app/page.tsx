@@ -143,7 +143,7 @@ export default function NovelyHub() {
 </section>
 
 {/* SEÇÃO: LANDING PAGES (PROJETOS) */}
-<section className="w-full space-y-4 my-12">
+<section className="w-full ">
   <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 ml-2 mb-4">
     Landing Pages
   </h2>
