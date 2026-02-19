@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ChevronRight, Instagram, Mail, MessageCircle, ArrowUpRight, BarChart3, Users, Headset, MessageCircleCheck } from 'lucide-react';
+import { ChevronRight, Instagram, Mail, MessageCircle, ArrowUpRight, BarChart3, Users, Headset, MessageCircleCheck, ArrowRight } from 'lucide-react';
 import Aurora from '@/components/Aurora';
 
 const BUSINESS_UNITS = [
@@ -13,8 +13,17 @@ const BUSINESS_UNITS = [
     name: "La Parma Pizzaria",
     slug: "/laparma",
     logo: "/laparma/logo.png",
-    description: "Gastronomia artesanal premium especializada em pizzas de longa fermentação.",
     tag: "Gastronomia",
+  },
+];
+
+const LANDING_PAGES = [
+  {
+    id: "dom-cabral",
+    name: "Dom Cabral",
+    url: "https://domcabral.vercel.app/",
+    logo: "/domcabral/logo.png",
+    tag: "Barbearia Premium",
   },
 ];
 
@@ -99,38 +108,75 @@ export default function NovelyHub() {
 </div>
 </header>
 
-        {/* UNIDADES DE NEGÓCIO */}
-        <section className="w-full space-y-4 my-6">
-          <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 ml-2 mb-4">
-            Nossos parceiros
-          </h2>
-          
-          {BUSINESS_UNITS.map((unit, idx) => (
-            <motion.div
-              key={unit.id}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: idx * 0.1 }}
-            >
-              <Link href={unit.slug}>
-                <div className="group relative bg-[#121214]/60 backdrop-blur-md border border-white/5 p-6 rounded-3xl flex items-center gap-6 hover:border-blue-500/40 hover:bg-[#161619] transition-all duration-500 shadow-xl">
-                  <div className="relative w-16 h-16 rounded-2xl ">
-                    <Image src={unit.logo} alt={unit.name} fill className="object-contain rounded-md border-white border-2" />
-                  </div>
 
-                  <div className="flex-1">
-                    <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest">{unit.tag}</span>
-                    <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                      {unit.name} 
-                      <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all text-blue-500" />
-                    </h2>
-                  </div>
-                  <ChevronRight className="text-slate-600 group-hover:text-white transition-colors" />
-                </div>
-              </Link>
-            </motion.div>
-          ))}
-        </section>
+{/* SEÇÃO: NOSSOS PARCEIROS (HUB LINKS) */}
+<section className="w-full space-y-4 my-6">
+  <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 ml-2 mb-4">
+    Nossos parceiros
+  </h2>
+  
+  {BUSINESS_UNITS.map((unit, idx) => (
+    <motion.div
+      key={unit.id}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: idx * 0.1 }}
+    >
+      <Link href={unit.slug}>
+        <div className="group relative bg-[#121214]/60 backdrop-blur-md border border-white/5 p-6 rounded-3xl flex items-center gap-6 hover:border-blue-500/40 hover:bg-[#161619] transition-all duration-500 shadow-xl">
+          <div className="relative w-16 h-16 rounded-2xl overflow-hidden   shrink-0">
+            <Image src={unit.logo} alt={unit.name} fill className="object-contain rounded-2xl" />
+          </div>
+
+          <div className="flex-1">
+            <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest">{unit.tag}</span>
+            <h2 className="text-xl font-bold text-white flex items-center gap-2">
+              {unit.name} 
+              <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all text-blue-500" />
+            </h2>
+          </div>
+          <ChevronRight className="text-slate-600 group-hover:text-white transition-colors shrink-0" />
+        </div>
+      </Link>
+    </motion.div>
+  ))}
+</section>
+
+{/* SEÇÃO: LANDING PAGES (PROJETOS) */}
+<section className="w-full space-y-4 my-12">
+  <h2 className="text-[10px] font-black uppercase tracking-[0.2em] text-slate-500 ml-2 mb-4">
+    Landing Pages
+  </h2>
+
+  {LANDING_PAGES.map((lp, idx) => (
+    <motion.div
+      key={lp.id}
+      initial={{ opacity: 0, scale: 0.95 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: idx * 0.1 }}
+    >
+      <a 
+        href={lp.url}
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="group relative bg-[#121214]/60 backdrop-blur-md border border-white/5 p-6 rounded-3xl flex items-center gap-6 hover:border-blue-500/40 hover:bg-[#161619] transition-all duration-500 shadow-xl"
+      >
+        <div className="relative w-16 h-16 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0">
+          <Image src={lp.logo} alt={lp.name} fill className="object-contain p-2" />
+        </div>
+
+        <div className="flex-1">
+          <span className="text-[9px] font-bold text-blue-500 uppercase tracking-widest">{lp.tag}</span>
+          <h2 className="text-xl font-bold text-white flex items-center gap-2">
+            {lp.name} 
+            <ArrowUpRight size={14} className="opacity-0 group-hover:opacity-100 transition-all text-blue-500" />
+          </h2>
+        </div>
+        <ChevronRight className="text-slate-600 group-hover:text-white transition-colors shrink-0" />
+      </a>
+    </motion.div>
+  ))}
+</section>
 
       {/* SEÇÃO: PERSONALIZAÇÃO / EXCLUSIVE PROJECTS */}
 <motion.section 
