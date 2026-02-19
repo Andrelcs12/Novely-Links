@@ -49,20 +49,7 @@ export default function NovelyHub() {
         
       {/* HERO SECTION */}
 <header className="text-center flex flex-col items-center">
-  {/* Badge de Localização Minimalista */}
-  <motion.div
-    initial={{ opacity: 0, y: -10 }}
-    animate={{ opacity: 1, y: 0 }}
-    className=" flex items-center gap-3 px-4 py-1 rounded-full border border-white/5 bg-white/[0.02]"
-  >
-    <span className="relative flex h-1.5 w-1.5">
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-red-600"></span>
-    </span>
-    <span className="text-white/30 text-[8px] font-bold uppercase tracking-[0.5em]">
-      Aracaju • Sergipe
-    </span>
-  </motion.div>
+
   
   {/* Logo Principal com Efeito de Profundidade */}
   <motion.div 
@@ -238,7 +225,7 @@ export default function NovelyHub() {
           
           <div className="text-center space-y-1">
             <p className="text-[9px] font-black uppercase tracking-[0.5em] text-white/20">Novely Company</p>
-            <p className="text-[8px] text-slate-600 font-bold uppercase tracking-widest">© 2026 Aracaju, SE • Brasil</p>
+            <p className="text-xs text-slate-600 font-bold tracking-widest">© 2026</p>
           </div>
         </footer>
 
