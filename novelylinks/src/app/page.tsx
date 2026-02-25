@@ -25,6 +25,13 @@ const LANDING_PAGES = [
     logo: "/domcabral/logo.png",
     tag: "Barbearia Premium",
   },
+  {
+    id: "tennis-academy",
+    name: "Tennis Elite Academy",
+    url: "/tenis", // Ou a URL completa se já estiver em outro domínio
+    logo: "/tenis/logo.png", // Certifique-se de ter essa imagem em public/tennis/logo.png
+    tag: "Esporte & Performance",
+  },
 ];
 
 export default function NovelyHub() {
@@ -159,7 +166,7 @@ export default function NovelyHub() {
         href={lp.url}
         target="_blank" 
         rel="noopener noreferrer"
-        className="group relative bg-[#121214]/60 backdrop-blur-md border border-white/5 p-6 rounded-3xl flex items-center gap-6 hover:border-blue-500/40 hover:bg-[#161619] transition-all duration-500 shadow-xl"
+        className="group mb-2 relative bg-[#121214]/60 backdrop-blur-md border border-white/5 p-6 rounded-3xl flex items-center gap-6 hover:border-blue-500/40 hover:bg-[#161619] transition-all duration-500 shadow-xl"
       >
         <div className="relative w-16 h-16 rounded-2xl overflow-hidden bg-black/40 border border-white/10 shrink-0">
           <Image src={lp.logo} alt={lp.name} fill className="object-contain p-2" />
@@ -185,7 +192,7 @@ export default function NovelyHub() {
   viewport={{ once: true }}
   className="w-full mb-12"
 >
-  <div className="relative overflow-hidden bg-[#0f0f12]/60 backdrop-blur-xl border border-white/5 rounded-[2.5rem] p-8 shadow-2xl">
+  <div className="relative overflow-hidden mt-8 bg-[#0f0f12]/60 backdrop-blur-xl border border-white/5 rounded-[2.5rem] p-8 shadow-2xl">
     {/* Glow de fundo mais contido */}
     <div className="absolute -top-24 -right-24 w-48 h-48 bg-blue-600/10 blur-[80px] rounded-full" />
     
